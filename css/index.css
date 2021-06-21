@@ -60,7 +60,7 @@
     top: -2rem;
 }
 
-main {
+.section-1, .section-3 {
     min-height: 100vh;
     width: 100%;
     background-image: url(../assets/svgs/airpod.svg), url(../assets/svgs/dollar.svg), url(../assets/svgs/mobile.svg), url(../assets/svgs/macbook.svg), url(../assets/svgs/microphone.svg);
@@ -72,7 +72,7 @@ main {
     display: flex;
 }
 
-.featured>* {
+.featured > * {
     flex-basis: 100%;
     padding: 2rem;
 }
@@ -83,6 +83,13 @@ main {
     flex-grow: 1;
     align-items: flex-start;
     justify-items: center;
+}
+.featured__container1 h3,
+.featured__container2 h3,
+.section-3 .title {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    margin-bottom: 1rem;
+    color: var(--clr-secondary-800);
 }
 
 .card {
@@ -95,6 +102,9 @@ main {
 }
 
 .card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     transition: transform 0.3s ease-in;
 }
 
@@ -135,12 +145,7 @@ main {
     transform: scale(1.05);
 }
 
-.featured__container1 h3,
-.featured__container2 h3 {
-    font-size: clamp(1.25rem, 3vw, 2rem);
-    margin-bottom: 1rem;
-    color: var(--clr-secondary-800);
-}
+
 
 .featured__container2 {
     display: grid;
@@ -191,6 +196,27 @@ main {
 
 .featured__container2 .featured__product:nth-of-type(4) {
     grid-area: card-4;
+}
+
+/* section 3 */
+
+.section-3 .title{
+    text-align: center;
+}
+.section-3 .products{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
+.section-3 .products > *:not(:last-child) {
+    margin-right: 1rem;
+}
+.section-3 .btn{
+    display: block;
+    width: fit-content;
+    background: var(--clr-secondary-800);
+    color: var(--clr-neutral-100);
+    margin-left: auto;
 }
 
 @media (max-width: 768px) {
