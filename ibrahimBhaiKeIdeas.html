@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* div {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      background: #ccc;
+      transition: all 500ms ease;
+    }
+
+    div.active {
+      height: 90vh;
+      width: 100%;
+
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    } */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      margin: 3rem
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    .card {
+      outline: 2px solid red;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+      transform: translate(10rem, 10rem);
+      overflow: hidden;
+    }
+
+    .card:hover .overlay {
+      animation: slide-in 500ms ease forwards;
+    }
+
+    .card:hover .detail {
+      transform: translateY(0);
+      transition: transform 250ms cubic-bezier(0, -0.12, 0.28, 1.38) 400ms;
+    }
+
+    @keyframes slide-in {
+      0% {
+        transform: translate(10rem, 10rem);
+      }
+
+      100% {
+        transform: translate(0);
+      }
+    }
+
+    .detail {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+      color: #f4f4f4;
+      transform: translateY(7rem);
+      transition: transform 250ms ease;
+    }
+
+    .detail>*:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div id="div"></div> -->
+  <div class="card">
+    <img src="https://source.unsplash.com/300x300/?nature,water" alt="">
+    <div class="overlay">
+      <ul class="detail">
+        <li class="product-name">Product Name: Name</li>
+        <li class="product-price">Price: $999</li>
+        <button class="btn">Order Now</button>
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+  div.addEventListener('click', () => div.classList.toggle('active'))
+</script>
+
+</html>

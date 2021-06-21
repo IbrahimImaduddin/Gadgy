@@ -1,0 +1,176 @@
+:root {
+  --ff-primary: 'Nunito', sans-serif;
+
+  --clr-primary-300: hsl(43, 90%, 60%);
+  --clr-primary-500: hsl(43, 90%, 50%);
+  --clr-primary-800: hsl(43, 90%, 30%);
+  --clr-neutral-100: hsl(0, 0%, 96%);
+  --clr-neutral-300: hsl(0, 0%, 77%);
+  --clr-neutral-900: hsl(0, 0%, 13%);
+  --clr-secondary-300: hsl(104, 15%, 46%);
+  --clr-secondary-800: hsl(104, 41%, 16%);
+  --btn-secondary: hsl(202, 79%, 27%);
+  --bg-vector: hsl(184, 59%, 19%);
+  --bg-circle: hsl(37, 79%, 61%);
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+/* core stylings */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--ff-primary);
+}
+body {
+  color: var(--clr-neutral-900);
+  line-height: 1.5;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+h1,
+h2 {
+  line-height: 1.3;
+}
+p {
+  margin: 10px 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+button {
+  font-size: inherit;
+}
+
+/* ================
+=====utilities=====
+===================*/
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* buttons */
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+/* navbar */
+
+.nav__container {
+  padding: 0.5rem 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dsk-navbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.dsk-navbar .logo {
+  display: inline-block;
+  font-size: clamp(0.75rem, 0.75rem + 1vw, 1.5rem);
+  text-transform: uppercase;
+}
+
+.dsk-navbar .nav {
+  display: flex;
+  background: var(--clr-neutral-100);
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  margin: 0 auto;
+}
+.dsk-navbar .nav__item + .nav__item {
+  margin-left: 0.5rem;
+}
+
+.dsk-navbar .nav__link {
+  display: inline-block;
+  text-transform: capitalize;
+  padding: 0.25em 0.5em;
+  transition: all 500ms;
+}
+
+.cta > * + * {
+  margin-left: 0.25rem;
+}
+
+.cart {
+  font-size: 1.5rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.sign-up,
+.login {
+  font-size: inherit;
+}
+.mb-navbar,
+.hamburger {
+  display: none;
+}
+@media only screen and (max-width: 700px) {
+  .dsk-navbar {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 1000;
+    color: #fff;
+    font-size: 2.5rem;
+  }
+  .mb-navbar {
+    background: #333;
+    color: #f4f4f4;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: none;
+  }
+  .mb-navbar.active {
+    display: block;
+  }
+
+  .mb-navbar .nav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .mb-navbar .nav__item {
+    font-size: 3rem;
+  }
+  .mb-navbar .nav__link {
+    color: inherit;
+    text-transform: capitalize;
+  }
+}

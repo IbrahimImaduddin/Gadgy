@@ -1,0 +1,9 @@
+<svg width="112" height="198" viewBox="0 0 112 198" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.8">
+    <line y1="-0.5" x2="212.246" y2="-0.5" transform="matrix(-0.402419 0.915455 -0.902267 -0.431178 105.824 2.69849)"
+      stroke="black" />
+    <line y1="-0.5" x2="212.246" y2="-0.5"
+      transform="matrix(-0.402419 0.915455 -0.902267 -0.431178 97.4117 -0.00012207)" stroke="black" />
+    <path d="M111 58.0204L34.6471 25.6368L20.4118 90.404L95.4706 134.931L50.1765 176.76L1 144.377" stroke="black" />
+  </g>
+</svg>
