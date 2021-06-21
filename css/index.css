@@ -17,6 +17,9 @@
 }
 .title__left {
   grid-column: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .bars__right {
   display: flex;
@@ -166,5 +169,14 @@ main {
   }
   .featured {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 500px){
+  .bars__right{
+    display: none;
+  }
+  .title__left{
+    grid-column: 1 /span 3;
   }
 }
