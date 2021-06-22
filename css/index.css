@@ -66,7 +66,17 @@
     background-image: url(../assets/svgs/airpod.svg), url(../assets/svgs/dollar.svg), url(../assets/svgs/mobile.svg), url(../assets/svgs/macbook.svg), url(../assets/svgs/microphone.svg);
     background-repeat: no-repeat;
     background-position: left 10%, 50% top, 110% top, left 90%, 40% 80%;
+    position: relative;
 }
+/* .section-1::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(../assets/triangleVectorArt.png) no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: auto;
+} */
 
 .featured {
     display: flex;
@@ -164,7 +174,7 @@
     border-radius: 1rem;
 }
 
-.featured__container2 .featured__product>* {
+.featured__container2 .featured__product > * {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
@@ -198,25 +208,75 @@
     grid-area: card-4;
 }
 
-/* section 3 */
+/* section 2 */
 
-.section-3 .title{
+.section-2 .title {
     text-align: center;
+    font-size: clamp(1.25rem, 1rem + 2vw, 3rem);
 }
-.section-3 .products{
+
+.categories {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
     padding: 2rem 0;
 }
-.section-3 .products > *:not(:last-child) {
-    margin-right: 1rem;
+
+.category {
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    flex-basis: 250px;
+    height: 300px;
 }
-.section-3 .btn{
+
+.category__name {
+    padding: 0.5em 1.25em;
+    border-radius: 1rem;;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--clr-neutral-100);
+    pointer-events: none;;
+}
+
+.category__img{
+    border-radius: 1rem;
+    height: 100%;
+    object-fit: cover;
+}
+
+:is(.section-2, .section-3) .secondary-btn{
     display: block;
     width: fit-content;
     background: var(--clr-secondary-800);
     color: var(--clr-neutral-100);
-    margin-left: auto;
+    margin: 0 8vw 0 auto;
+}
+
+/* section 3 */
+
+.section-3 .title{
+    text-align: center;
+    font-size: clamp(1.25rem, 1rem + 2vw, 3rem);
+
+}
+.section-3 .products{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.section-3 .card{
+    flex-basis: 250px;
+}
+
+.section-3 .card__detail{
+    font-size: clamp(0.9rem, 1vw, 1.2rem);
 }
 
 @media (max-width: 768px) {
