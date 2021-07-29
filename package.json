@@ -1,0 +1,22 @@
+{
+  "name": "gadgy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch data/db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IbrahimImaduddin/Gadgy.git"
+  },
+  "author": "Ibrahim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IbrahimImaduddin/Gadgy/issues"
+  },
+  "homepage": "https://github.com/IbrahimImaduddin/Gadgy#readme",
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/utilities.css">
+  <link rel="stylesheet" href="./css/card.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header class="showcase">
+    <div class="container">
+      <div class="nav__container">
+        <nav class="dsk-navbar">
+          <a href="#" class="logo">gadgy</a>
+          <ul class="nav">
+            <li class="nav__item"><a href="index.html" class="nav__link">home</a></li>
+            <li class="nav__item"><a href="about.html" class="nav__link">about</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">categories</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav class="mb-navbar">
+          <ul class="nav">
+            <li class="nav__item"><a href="index.html" class="nav__link">home</a></li>
+            <li class="nav__item"><a href="about.html" class="nav__link">about</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">categories</a></li>
+          </ul>
+        </nav>
+        <div class="cta">
+          <i class="fas fa-shopping-cart cart"></i>
+          <button class="btn sign-in">Sign up</button>
+          <button class="btn log-in">Log in</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- product details -->
+  <main class="product">
+    <div class="container">
+      <!-- <div class="grid">
+        <div class="product__image">
+          <img src="https://source.unsplash.com/1600x900/?coding" alt="">
+        </div>
+        <div class="product__details">
+          <h2 class="product__name">product name</h2>
+          <p class="product__price">Rs. 999 / piece</p>
+          <div class="product__ratings">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <ul class="product__description">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, at?</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, at?</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, at?</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, at?</li>
+          </ul>
+          <div class="buttons">
+            <button class="btn add-to-cart">Add to Cart</button>
+            <button class="btn buy-now">Buy Now</button>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </main>
+
+  <!-- Similar Products -->
+  <div class="similar-products">
+    <div class="container">
+      <h3 class="title">Related Products</h3>
+      <div class="grid">
+        <!-- <div class="card">
+          <img src="https://source.unsplash.com/1600x900/?coding" alt="">
+          <div class="overlay">
+            <ul class="card__detail">
+              <li class="product-name">Product Name</li>
+              <li class="product-price">Product Price</li>
+              <a href="#" class="btn">Visit</a>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+      <a href="#" class="btn see-more">See More</a>
+    </div>
+  </div>
+
+  <template id="productDetail">
+    <div class="grid">
+      <div class="product__image">
+        <img src="" alt="">
+      </div>
+      <div class="product__details">
+        <h2 class="product__name"></h2>
+        <p class="product__price"></p>
+        <div class="product__ratings">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <i class="far fa-star"></i>
+        </div>
+        <ul class="product__description">
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, at?</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, at?</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, at?</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, at?</li>
+        </ul>
+        <div class="buttons">
+          <button class="btn add-to-cart">Add to Cart</button>
+          <button class="btn buy-now">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="cardTemplate">
+    <div class="card">
+      <img src="" alt="">
+      <div class="overlay">
+        <ul class="card__detail">
+          <li class="product-name"></li>
+          <li class="product-price"></li>
+          <a href="" class="btn">Visit</a>
+        </ul>
+      </div>
+    </div>
+  </template>
+</body>
+
+<script src="./js/basics.js"></script>
+<script src="./js/categoryDetail.js"></script>
+
+</html>
